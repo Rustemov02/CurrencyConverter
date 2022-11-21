@@ -10,14 +10,11 @@ const gbpBtn = document.querySelector('.gbp')
 
 let baseParagraph = document.querySelector('.baseParagraph')
 let rateParagraph = document.querySelector('.rateParagraph')
-let obj = { base: null, rate: null, sum: null, baseInput: 0, rateInput: 0 }, rate
+let obj = { base: null, rate: null, baseInput: 0, rateInput: 0 }, rate
 
 window.addEventListener('load', () => {
     baseButton[0].classList.add('active')
-    rateButton[1].classList.add('active')
-    obj.base = baseButton[0].innerHTML
-    obj.sum = baseButton[0].innerHTML
-    obj.rate = rateButton[1].innerHTML
+    rateButton[1].classList.add('active') 
 })
 
 baseInput.addEventListener('keyup', () => {
