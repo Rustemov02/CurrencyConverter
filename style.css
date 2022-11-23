@@ -10,6 +10,7 @@
     gap: 120px   ;
     margin-top: 40px;
     padding: 30px 0;
+
 }
 .cont{
     display: flex;
@@ -48,3 +49,4 @@ input::-webkit-inner-spin-button {
     color: white;
     background: #833AE0;
 }
+ 
