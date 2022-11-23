@@ -1,1 +1,1 @@
-# CurrencyConverter_v.2
+https://app.netlify.com/sites/v2currency/settings/general
