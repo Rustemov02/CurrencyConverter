@@ -1,20 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* HEADER */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 10px;
+    background-color: #F5F5F6;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+}
+header ul li{
+    font-size: 18px; 
+    padding: 5px 13px;
+    font-family: 'Roboto' , sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+    color: gray;
+}
+ul li:hover{
+    color: black; 
+}
+header button{
+    font-size: 20px ;
+    padding: 3px 5px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 4px;
+}
+
+/* CONTAINER */
 .container {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center; 
+    margin-top: 40px;
+    padding: 30px 0;
+}
+.container h2{
+    justify-items: center;
+    width: 65.3%;
+    margin: auto;
+    font-size: 32px;
+    padding: 20px 0;
+}
+.currencyCont{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 120px   ;
-    margin-top: 40px;
-    padding: 30px 0;
-
+    gap: 120px ;
+    width: fit-content;
+    margin: auto;
 }
 .cont{
     display: flex;
     flex-direction: column;
+}
+.cont label{
+    padding: 12px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana,    sans-serif;
+    color: black;
 }
 .buttons{
     display: flex;
@@ -23,10 +76,10 @@
     width: 440px;
 }   
 .buttons button{
-    font-size: 30px;
-    /* background: white; */
+    font-size: 30px; 
     border: 1px solid gray;
     padding: 8px 15px;
+    cursor: pointer;
 }
 .cont .inputArea input{
     font-size: 30px;

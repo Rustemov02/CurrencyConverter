@@ -10,39 +10,61 @@
 </head>
 
 <body>
+
+    <header>
+        <img src="logo.svg" alt="">
+
+        <ul>
+            <li>Bank</li>
+            <li>Business</li>
+            <li>Investment</li>
+            <li>Insurance</li>
+            <li>Mobile</li>
+            <li>Travels</li>
+            <li>Entertainment</li>
+        </ul>
+
+        <button>Log In</button>
+    </header>
+
     <div class="container">
-        <div class="baseContainer cont">
-            <div class="buttons">
-                <button class="rub base">RUB</button>
-                <button class="usd base ">USD</button>
-                <button class="eur base">EUR</button>
-                <button class="gbp base">GBP</button>
-            </div>
-           <div class="inputArea">
-            <input type="number" class="baseInput">
-            <p class="baseParagraph"></p>
-           </div>
-       </div>
+        <h2>Currency Converter Online</h2>
 
-
-        <div class="rateContainer cont">
-            <div class="buttons">
-                <button class="rub rate ">RUB</button>
-                <button class="usd rate">USD</button>
-                <button class="eur rate">EUR</button>
-                <button class="gbp rate">GBP</button>
+        <div class="currencyCont">
+            <div class="baseContainer cont">
+                <label for="">I have</label>
+                <div class="buttons">
+                    <button class="rub base">RUB</button>
+                    <button class="usd base ">USD</button>
+                    <button class="eur base">EUR</button>
+                    <button class="gbp base">GBP</button>
+                </div>
+                <div class="inputArea">
+                    <input type="number" class="baseInput">
+                    <p class="baseParagraph"></p>
+                </div>
             </div>
-            <div class="inputArea">
-                <input type="number" class="rateInput">
-                <p class="rateParagraph"></p>
-               </div>
+
+            <div class="rateContainer cont">
+                <label for="">I want to buy</label>
+                <div class="buttons">
+                    <button class="rub rate ">RUB</button>
+                    <button class="usd rate">USD</button>
+                    <button class="eur rate">EUR</button>
+                    <button class="gbp rate">GBP</button>
+                </div>
+                <div class="inputArea">
+                    <input type="number" class="rateInput">
+                    <p class="rateParagraph"></p>
+                </div>
+            </div>
         </div>
-        
-         
+
+
 
     </div>
 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
 
 </html>

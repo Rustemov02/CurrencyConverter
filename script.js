@@ -10,20 +10,18 @@ const gbpBtn = document.querySelector('.gbp')
 
 let baseParagraph = document.querySelector('.baseParagraph')
 let rateParagraph = document.querySelector('.rateParagraph')
-let obj = { base: 'RUB', rate: 'USD', baseInput: 0, rateInput: 0 }, rate , amountOfRate
+let obj = { base: 'RUB', rate: 'USD', baseInput: 0, rateInput: 0 }, rate, amountOfRate
 
 window.addEventListener('load', () => {
     baseButton[0].classList.add('active')
-    rateButton[1].classList.add('active')  
-    // obj.base = 'RUB'  
-    // obj.rate= 'USD'  
-}) 
+    rateButton[1].classList.add('active')
+})
 baseInput.addEventListener('keyup', () => {
     obj.baseInput = baseInput.value
     baseFetch(obj)
-}) 
+})
 
-rateInput.addEventListener('keyup' , ()=>{ 
+rateInput.addEventListener('keyup', () => {
     rateFetch(obj)
 })
 baseButton.forEach((event) => {
@@ -32,7 +30,7 @@ baseButton.forEach((event) => {
             event.classList.remove('active')
             this.classList.add('active')
         })
-        obj.base = this.innerText 
+        obj.base = this.innerText
         baseFetch(obj)
     })
 })
@@ -43,20 +41,20 @@ rateButton.forEach((event) => {
             event.classList.remove('active')
             this.classList.add('active')
         })
-        obj.rate = this.innerText 
+        obj.rate = this.innerText
         rateFetch(obj)
     })
 })
 
-function baseFetch(obj) { 
+function baseFetch(obj) {
     if (obj.baseInput !== null) {
         fetch(`https://api.exchangerate.host/latest?base=${obj.base}&symbols=${obj.rate}`)
             .then(resp => resp.json())
             .then(data => {
                 rate = Object.values(data.rates)[0]
-                amountOfRate = (obj.baseInput / rate).toFixed(2)  
-                let amount = (rate * obj.baseInput).toFixed(2) 
-                rateInput.value = amount    
+                amountOfRate = (obj.baseInput / rate).toFixed(2)
+                let amount = (rate * obj.baseInput).toFixed(2)
+                rateInput.value = amount
                 baseParagraph.innerText = `1  ${obj.base} = ${rate.toFixed(2)} ${obj.rate}`
                 rateParagraph.innerText = `1 ${obj.rate} = ${amountOfRate} ${obj.base}`
             })
@@ -64,16 +62,16 @@ function baseFetch(obj) {
                 alert(err);
             })
     }
-}  
- 
-function rateFetch(obj){
+}
+
+function rateFetch(obj) {
     fetch(`https://api.exchangerate.host/latest?base=${obj.rate}&symbols=${obj.base}`)
-    .then(resp => resp.json())
-    .then(data =>{  
-            base = Object.values(data.rates) 
+        .then(resp => resp.json())
+        .then(data => {
+            base = Object.values(data.rates)
             baseInput.value = (base * rateInput.value).toFixed(1)
-    })
-    .catch((err) =>{
-        alert(err)
-    })
+        })
+        .catch((err) => {
+            alert(err)
+        })
 }
